@@ -25,6 +25,9 @@
                   <a href="" class="nav-link" style="color: #e9e6e1;">Preços</a>
                 </li>
                 <li class="nav-item">
+                  <a href="" class="nav-link" style="color: #e9e6e1;">Downloads</a>
+                </li>
+                <li class="nav-item">
                   <a href="" class="btn btn-outline-light ml-4" @click="redirect ();" style="color: #e9e6e1;">Entrar</a>
                 </li>
               </ul>
@@ -50,7 +53,7 @@
             </div>
           </div><!--/fim textos da seção -->
           <div class="col-md-6 d-none d-md-block">
-            <img src="../assets/capa-mulher.png">
+            <img src="">
           </div>
         </div>
       </div>
@@ -121,23 +124,39 @@
       </div>
     </section><!--/FIM seção recursos -->
 
-    <section class="caixa"><!--/Início seção juros -->
+    <section class="caixa" style="background-color:#033249;"><!--/Início seção juros -->
       <div class="container">
         <div class="row">
           <div class="col-md-3">
           </div>
-          <div class="col-md-7 d-flex">
+          <div class="col-md-7">
             <div class="align-self-center">
-              <h2>Teste Grátis</h2>
-              <div class="row">
-              <div class="col-sm-4">
-                <input type="text" placeholder="Nome" class="form-control">
+              <div class="col">
+                <div>
+                <h1 style="color: #ffffff;">Teste Grátis</h1>
               </div>
-              <div class="col-sm-7">
-                <input type="text" placeholder="Seu e-mail" class="form-control">
+              <br>
+                <div class="col-sm-7">
+                  <input type="text" placeholder="Nome" class="form-control">
+                </div>
+                <br>
+                <div class="col-sm-7">
+                  <input type="text" placeholder="Telefone" class="form-control">
+                </div>
+                <br>
+                <div class="col-sm-7">
+                  <input type="text" placeholder="Seu e-mail" class="form-control">
+                </div>
+                <br>
+                <div class="col-sm-7">
+                  <button
+                  class="btn btn-outline-info"
+                  @click="form.del=false;form.add=true;form.edit=false;openModal=true;">
+                  &nbsp;&nbsp;Proseguir
+                </button>
+                </div>
+                <br>
               </div>
-            </div>
-              <a href="" class="btn btn-primary">Veja mais</a>
             </div>
           </div>
         </div>
@@ -153,6 +172,7 @@
               <a href="">Recursos</a>
               <a href="">Benefícios</a>
               <a href="">Preços</a>
+              <a href="">Downloads</a>
             </p>
           </div>
           <div class="col-md-4 d-flex justify-content-end">
@@ -200,5 +220,13 @@ html{
 
 footer p a {
  margin: 5px 15px;
+}
+button {
+  color: #ffffff;
+  border-color:#ffffff;
+}
+button:hover {
+  background-color: #5e8a75;
+  border-color:#5e8a75;
 }
 </style>
