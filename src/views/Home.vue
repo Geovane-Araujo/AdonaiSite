@@ -59,7 +59,7 @@
       </div>
     </section><!--/fim seção home -->
 
-    <section class="caixa"><!--/Início seção saiba -->
+    <section class="caixa">
       <div class="container" id="apresentacao">
         <div class="row">
           <div class="col-md-6 d-flex">
@@ -75,17 +75,17 @@
           </div>
         </div>
       </div>
-    </section><!--/FIM seção saiba -->
+    </section>
 
-    <section class="caixa"><!--/Início seção juros -->
+<!--     <section class="caixa">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="../assets/juros.png" class="img-fluid">
+            <img src="../assets/imgprincipal.png" class="img-fluid">
           </div>
           <div class="col-md-6 d-flex">
             <div class="align-self-center">
-              <h2>Pare de pagar juros e economize</h2>
+              <h2>Pare de </h2>
               <p>
                 Manter as contas em dia é sempre um problema? O Finans avisa você: receba alertas de contas a pagar e a receber!
               </p>
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-    </section><!--/FIM seção juros -->
+    </section> -->
 
     <section class="caixa"><!--/Início seção recursos -->
       <div class="container">
