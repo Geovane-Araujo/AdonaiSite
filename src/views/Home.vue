@@ -137,21 +137,21 @@
               </div>
               <br>
                 <div class="col-sm-7">
-                  <input type="text" placeholder="Nome" class="form-control">
+                  <input type="text" v-model="form.nome" placeholder="Nome" class="form-control">
                 </div>
                 <br>
                 <div class="col-sm-7">
-                  <input type="text" placeholder="Telefone" class="form-control">
+                  <input type="text" v-model="form.telefone" placeholder="Telefone" class="form-control">
                 </div>
                 <br>
                 <div class="col-sm-7">
-                  <input type="text" placeholder="Seu e-mail" class="form-control">
+                  <input type="text" v-model="form.email" placeholder="Seu e-mail" class="form-control">
                 </div>
                 <br>
                 <div class="col-sm-7">
                   <button
                   class="btn btn-outline-info"
-                  @click="form.del=false;form.add=true;form.edit=false;openModal=true;">
+                  @click="send(form)">
                   &nbsp;&nbsp;Proseguir
                 </button>
                 </div>
