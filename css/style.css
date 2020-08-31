@@ -1,22 +1,15 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
 nav ul a,
 nav .brand-logo {
-  color: #444;
+  color: #033249;
 }
 
 p {
   line-height: 2rem;
 }
+img { filter: brightness(número ou porcentagem);  }
 
 .sidenav-trigger {
-  color: #26a69a;
+  color: #033249;
 }
 
 .parallax-container {
@@ -43,8 +36,10 @@ p {
   #index-banner .section {
     top: 0;
   }
+} /**#5e8a75;**/
+.center {
+  color: #033249;
 }
-
 .icon-block {
   padding: 0 15px;
 }
