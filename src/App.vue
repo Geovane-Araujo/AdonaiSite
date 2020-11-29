@@ -8,7 +8,7 @@
           </div>
           <ul class="right hide-on-med-and-down">
             <li><a href="#/" style="color:#033249;">Home</a></li>
-            <li><a href="#testegratis" style="color:#033249;">Planos</a></li>
+            <li><a href="#testegratis" style="color:#033249;">Teste Grátis</a></li>
             <li><a href="http://app.adonaisoft.com.br/#/login" style="color:#033249;">Acesse</a></li>
             <li><a href="#/blog" style="color:#033249;">Adonai Blog</a></li>
           </ul>

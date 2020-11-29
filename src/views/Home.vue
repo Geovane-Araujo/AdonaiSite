@@ -9,7 +9,7 @@
           <h5 align="left" class="header col s12 light">Ferramenta online para facilitar na gestão completa da sua igreja.</h5>
         </div>
         <div class="row right">
-          <a href="#testegratis" id="download-button" class="butt btn-small waves-effect waves-light  teal ">Conhecer</a>
+          <a href="https://app.adonaisoft.com.br/#/register" id="modal1" class="butt modal-trigger btn-small waves-effect waves-light  teal ">Teste Grátis</a>
         </div>
         <br><br>
       </div>
@@ -67,7 +67,7 @@
       </div>
     </div>
   </div>
-  <div class="parallax-container valign-wrapper">
+  <div  class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
@@ -78,70 +78,25 @@
     </div>
     <div class="parallax"><img src="../img/background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
-  <div class="container">
+  <div id="testegratis" class="container">
     <div class="section">
-      <div class="row">
-        <h4 class="center" >Teste os Planos Standart e Profissional 7 dias Grátis<br></h4>
-        <div style="display: flex;">
-          <div class="col s12 m4" >
-            <div class="card" style="height: 100%" >
-              <div class="card-content">
-                <div class="icon-block">
-                  <h2 class="center" >0,00</h2>
-                  <h5 class="center" >Gratuito</h5>
-                  <p class="center">
-                    50 membros<br>
-                    10 Usuarios<br>
-                    DashBoard<br>
-                    3 Caixas<br><br>
-                  </p>
-                </div>
-              </div>
-              <div class="card-action">
-                <a href="" class="btn-small waves-effect teal">Cadastre-se</a>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="card" style="height: 100%">
-              <div class="card-content">
-                <div class="icon-block">
-                  <h2 class="center">49,99*</h2>
-                  <h5 class="center">Standart</h5>
-                  <p class="center">
-                    200 membros<br>
-                    30 Usuarios<br>
-                    DashBoard<br>
-                    Caixas ilimitados<br>
-                    Aplicativo Gestão<br>
-                    Relatórios Personalizados*<br>
-                    <br>
-                    <a href="" id="download-button" class="butt btn-small waves-effect teal ">Teste já</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4">
-            <div class="card" style="height: 100%">
-              <div class="card-content">
-                <div class="icon-block">
-                  <h2 class="center">79,99*</h2>
-                  <h5 class="center">Profissional</h5>
-                  <p class="center">
-                    Membros Ilimitados<br>
-                    Usuarios ilimitaos<br>
-                    DashBoard<br>
-                    Caixas ilimitados<br>
-                    Aplicativo Gestão<br>
-                    Aplicativo Membros<br>
-                    Relatórios Personalizados*<br><br>
-                    <a href="" id="download-button" class="butt btn-small waves-effect teal ">Teste já</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="col-sm-12">
+        <h3>Teste grátis por 7 dias</h3>
+        <div v-show="false" class="input-field col s6">
+          <input v-model="form.nome"  type="text" class="validate">
+          <label for="last_name">Nome Completo</label>
+        </div>
+        <div v-show="false" class="input-field col s6">
+          <the-mask
+          type="text" v-model="form.telefone"  the-mask :mask="'(##)#####-####'" class="validate"/>
+          <label for="last_name">Telefone</label>
+        </div>
+        <div v-show="false" class="input-field col s6">
+          <input v-model="form.email"  type="text" class="validate">
+          <label for="last_name">Email</label>
+        </div>
+        <div style="margin-top: 60px">
+          <a href="https://app.adonaisoft.com.br/#/register" id="download-button" class="butt btn-small waves-effect waves-light  teal ">Teste Grátis</a>
         </div>
       </div>
     </div>
@@ -180,12 +135,49 @@
     <div class="footer-copyright">
     </div>
   </footer>
+    <!-- Modal Structure -->
+  <div  id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  name: 'Home'
+  data () {
+    return {
+      concluido: false,
+      form: {
+        nome: '',
+        email: '',
+        telefone: ''
+      }
+    }
+  },
+  mounted () {
+  },
+  methods: {
+    async save (form) {
+      await axios.post('http://adonaisoft.tk:8089/adonai/newUser', form).then(res => {
+        if (res.data.ret === 'success') {
+          alert('Verifique seu Email por favor')
+        }
+      }).catch(err => alert(err))
+    }
+    /* modal () {
+      var elem = document.querySelector('.modal1')
+      var instance = M.Modal.getInstance(elem)
+      instance.open()
+    } */
+  }
 }
 </script>
 <style lang="css" scoped>
@@ -200,6 +192,7 @@ th {
 html {
   scroll-behavior: smooth;
 }
+
 p {
   line-height: 2rem;
 }
@@ -210,7 +203,7 @@ img { filter: brightness(40%); }
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 410px;
   line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
